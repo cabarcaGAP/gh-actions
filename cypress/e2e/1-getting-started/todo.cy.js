@@ -22,7 +22,7 @@ describe('example to-do app', () => {
 
   it('can add new todo items', () => {
     cy.get('#username').type('student')
-    cy.get('#password').type('${{ secrets.SECRET_TOKEN }}')
+    cy.get('#password').type('`${{ secrets.TEST_HELLO }}`')
     cy.get('#submit').click()
   })
 })
