@@ -1,0 +1,11 @@
+{
+  "name": "gh-actions",
+  "version": "1.0.0",
+  "description": "test",
+  "main": "cypress.config.js",
+  "scripts": {
+    "test": "npx cypress run"
+  },
+  "author": "",
+  "license": "ISC"
+}
