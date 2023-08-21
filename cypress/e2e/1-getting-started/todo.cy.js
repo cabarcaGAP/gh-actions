@@ -24,5 +24,6 @@ describe('example to-do app', () => {
     cy.get('#username').type('student')
     cy.get('#password').type(`${Cypress.env('TEST_HELLO')}`)
     cy.get('#submit').click()
+    cy.contains('Logged In Successfully')
   })
 })
