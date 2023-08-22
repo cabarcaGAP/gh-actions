@@ -11,18 +11,14 @@
 // please read our getting started guide:
 // https://on.cypress.io/introduction-to-cypress
 
-describe('example to-do app', () => {
+describe('Student login', () => {
   beforeEach(() => {
-    // Cypress starts out with a blank slate for each test
-    // so we must tell it to visit our website with the `cy.visit()` command.
-    // Since we want to visit the same URL at the start of all our tests,
-    // we include it in our beforeEach function so that it runs before each test
-    cy.visit('https://practicetestautomation.com/practice-test-login/')
+    cy.visit('/')
   })
 
-  it('can add new todo items', () => {
+  it('can login with Secret Password', () => {
     cy.get('#username').type('student')
-    cy.get('#password').type(`${Cypress.env('SECRET_PASS')}`)
+    cy.get('#password').type(`${Cypress.env('SECRET_PASS')}`, { log: false }) // The password comes from the cypress.env.json { "SECRET_PASS": "randompass" }
     cy.get('#submit').click()
     cy.contains('Logged In Successfully')
   })
