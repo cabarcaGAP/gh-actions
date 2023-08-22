@@ -1,5 +1,5 @@
 # gh-actions
-Add a file called cypress.env.json with this:
+Add a file called cypress.env.json to the root folder with this:
   {
     "SECRET_PASS":"Password123"
   }
