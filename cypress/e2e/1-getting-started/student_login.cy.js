@@ -22,7 +22,6 @@ describe('example to-do app', () => {
 
   it('can add new todo items', () => {
     cy.get('#username').type('student')
-    cy.log("SECRETOOOOOO: "+`${Cypress.env('SECRET_PASS')}`)
     cy.get('#password').type(`${Cypress.env('SECRET_PASS')}`)
     cy.get('#submit').click()
     cy.contains('Logged In Successfully')
