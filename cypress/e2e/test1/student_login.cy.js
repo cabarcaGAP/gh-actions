@@ -1,0 +1,25 @@
+/// <reference types="cypress" />
+
+// Welcome to Cypress!
+//
+// This spec file contains a variety of sample tests
+// for a todo list app that are designed to demonstrate
+// the power of writing tests in Cypress.
+//
+// To learn more about how Cypress works and
+// what makes it such an awesome testing tool,
+// please read our getting started guide:
+// https://on.cypress.io/introduction-to-cypress
+
+describe('Student login', () => {
+  beforeEach(() => {
+    cy.visit('/')
+  })
+
+  it('can login with Secret Password - OFICIAL', () => {
+    cy.get('#username').type('student')
+    cy.get('#password').type(`${Cypress.env('SECRET_PASS')}`, { log: false }) // The password comes from the cypress.env.json { "SECRET_PASS": "randompass" }
+    cy.get('#submit').click()
+    cy.contains('Logged In Successfully')
+  })
+})

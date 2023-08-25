@@ -16,7 +16,7 @@ describe('Student login', () => {
     cy.visit('/')
   })
 
-  it('can login with Secret Password', () => {
+  it('can login with Secret Password - COPYTEST!', () => {
     cy.get('#username').type('student')
     cy.get('#password').type(`${Cypress.env('SECRET_PASS')}`, { log: false }) // The password comes from the cypress.env.json { "SECRET_PASS": "randompass" }
     cy.get('#submit').click()
