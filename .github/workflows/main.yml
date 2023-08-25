@@ -9,7 +9,6 @@ jobs:
       # Install npm dependencies, cache them correctly
       # and run all Cypress tests
       - name: Cypress run
-        uses: cypress-io/github-action@v5
         env:
           CYPRESS_SECRET_PASS: ${{ secrets.CYPRESS_SECRET_PASS }}
-        run: "cypress run --spec cypress/e2e/test1/*"
+        run: "npx cypress run --spec cypress/e2e/test1/*"
