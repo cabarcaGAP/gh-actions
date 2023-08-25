@@ -13,5 +13,6 @@ jobs:
         with:
           spec: cypress/e2e/test/*
           browser: chrome
+          config: baseUrl=https://google.com
         env:
           CYPRESS_SECRET_PASS: ${{ secrets.CYPRESS_SECRET_PASS }}
