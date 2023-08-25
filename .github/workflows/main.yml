@@ -11,7 +11,7 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v5
         with:
-          command: npx cypress run --spec cypress/e2e/test1/*
+          spec: cypress/e2e/test1/*
           browser: chrome
         env:
           CYPRESS_SECRET_PASS: ${{ secrets.CYPRESS_SECRET_PASS }}
